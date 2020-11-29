@@ -1,3 +1,155 @@
-/*# sourceMappingURL=main.scss.map */
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 78px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.header__logo {
+  display: inline-block;
+  margin: 0 10% 0 50px;
+}
+@media screen and (max-width: 768px) {
+  .header__logo {
+    margin: 0 10px 0 10px;
+  }
+}
+.header__logo img {
+  width: 128px;
+  vertical-align: bottom;
+}
+.header__nav-main {
+  width: 40%;
+  border-right: solid 2px #ddd;
+  line-height: 2em;
+}
+.header__nav-main ul {
+  display: flex;
+  justify-content: space-around;
+}
+.header__nav-main ul li {
+  transition: all 0.5s ease;
+}
+.header__nav-main ul li:hover {
+  opacity: 0.7;
+}
+.header__nav-main ul li a {
+  color: black;
+}
+.header__nav-sub {
+  line-height: 2em;
+  flex: 1;
+}
+.header__nav-sub ul {
+  display: flex;
+  justify-content: space-around;
+}
+.header__nav-sub ul li {
+  border-radius: 100px;
+  background: #ea7332;
+  transition: all 0.5s ease;
+}
+.header__nav-sub ul li:hover {
+  opacity: 0.7;
+}
+.header__nav-sub ul li a {
+  color: #fff;
+  padding: 0 20px;
+  display: block;
+}
+
+.footer {
+  background-color: #282828;
+  font-size: 14px;
+  color: #fff;
+  flex: 1;
+}
+.footer a {
+  color: #fff;
+}
+.footer__nav {
+  display: flex;
+  padding: 60px 40px;
+  border-bottom: solid 1px #818181;
+}
+@media screen and (max-width: 768px) {
+  .footer__nav {
+    display: block;
+    padding: 60px 40px 0;
+  }
+}
+.footer__main {
+  width: 57%;
+  border-right: solid 1px #818181;
+}
+@media screen and (max-width: 768px) {
+  .footer__main {
+    width: auto;
+    border-bottom: solid 1px #818181;
+    border-right: 0;
+  }
+}
+.footer__logo {
+  display: inline-block;
+}
+.footer__logo img {
+  width: 128px;
+  vertical-align: bottom;
+}
+.footer__items {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 65px 0 0;
+}
+@media screen and (max-width: 768px) {
+  .footer__items {
+    margin: 50px 0 15px;
+  }
+}
+.footer__item li {
+  line-height: 2.5em;
+}
+.footer__sub {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 130px;
+}
+@media screen and (max-width: 768px) {
+  .footer__sub {
+    margin-bottom: auto;
+    margin: 15px 0;
+  }
+}
+.footer__sport-in-life {
+  width: 96px;
+  margin: 0 30px;
+}
+.footer__sportscho {
+  width: 79px;
+  margin: 0 30px;
+}
+.footer__last ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+.footer__last ul li {
+  margin: 0px 15px;
+}
+.footer__copy {
+  display: flex;
+  justify-content: center;
+  margin: 3% 0;
+  color: #6d6d6d;
+  font-size: 12px;
+}
 
 /*# sourceMappingURL=main.css.map */

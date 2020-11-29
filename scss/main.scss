@@ -1,3 +1,199 @@
+$mq-breakpoints: (
+  'xsmall': 320px,
+  'small' : 600px,
+  'medium': 768px,
+  'large' : 1024px,
+  'xlarge': 1280px,
+);
+
+@mixin mq($breakpoint) {
+  @media screen and (max-width: #{map-get($mq-breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  height: 78px;
+  font-size: 14px;
+  font-weight: bold;
+
+  &__logo{
+    display: inline-block;
+    margin: 0 10% 0 50px;
+
+    @include mq(medium){
+      margin: 0 10px 0 10px;
+    }
+    img{
+      width: 128px;
+      vertical-align:bottom;
+    }
+  }
 
 
-/*# sourceMappingURL=main.scss.map */
+  &__nav-main{
+    width: 40%;
+    border-right: solid 2px #ddd;
+    line-height: 2em;
+
+
+    ul{
+      display: flex;
+      justify-content: space-around;
+
+      li{
+        transition: all 0.5s ease;
+
+        &:hover{
+          opacity: 0.7;
+        }
+
+        a{
+          color: black;
+        }
+
+      }
+    }
+  }
+
+  &__nav-sub{
+    line-height: 2em;
+    flex: 1;
+    ul{
+      display: flex;
+      justify-content: space-around;
+
+      li{
+        border-radius: 100px;
+        background: #ea7332;
+        transition: all 0.5s ease;
+
+        &:hover{opacity: 0.7;
+        }
+
+
+        a{
+          color: #fff;
+          padding: 0 20px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.footer{
+  background-color: #282828;
+  font-size: 14px;
+  color: #fff;
+  flex: 1;
+
+  a{
+    color: #fff;
+  }
+
+  &__nav{
+    display: flex;
+    padding: 60px 40px;
+    border-bottom: solid 1px #818181;
+
+    @include mq(medium){
+      display: block;
+      padding: 60px 40px 0;
+    }
+  }
+
+  &__main{
+    width: 57%;
+    border-right: solid 1px #818181;
+
+    @include mq(medium){
+      width: auto;
+      border-bottom: solid 1px #818181;
+      border-right: 0;
+    }
+  }
+
+  &__logo{
+    display: inline-block;
+
+    img{
+      width: 128px;
+      vertical-align: bottom;
+    }
+  }
+
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 65px 0 0;
+
+    @include mq(medium){
+      margin: 50px 0 15px;
+    }
+  }
+
+  &__item{
+
+    li{
+      line-height: 2.5em;
+    }
+  }
+
+  &__sub{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 130px;
+
+    @include mq(medium){
+      margin-bottom: auto;
+      margin: 15px 0;
+    }
+
+  }
+
+  &__sport-in-life{
+    width: 96px;
+    margin: 0 30px;
+  }
+
+  &__sportscho{
+    width: 79px;
+    margin: 0 30px;
+  }
+
+  &__last{
+
+    ul{
+      display: flex;
+      justify-content: center;
+      margin-top: 5%;
+
+      li{
+        margin: 0px 15px;
+      }
+    }
+
+
+
+  }
+
+  &__copy{
+    display: flex;
+    justify-content: center;
+    margin: 3% 0;
+    color: #6d6d6d;
+    font-size: 12px;
+  }
+
+}
